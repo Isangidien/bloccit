@@ -30,3 +30,5 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Use bootstrap-sass for css framework and layout
 gem 'bootstrap-sass'
+
+gem 'rails_12factor', group: :production
