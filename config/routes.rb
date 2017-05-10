@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
-  root 'welocme#index'
+  root 'welcome#index'
 
 end
