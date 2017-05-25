@@ -20,7 +20,7 @@ let(:new_user_attributes) do
        expect(assigns(:user)).to_not be_nil
      end
    end
-   
+
    describe "POST create" do
    it "returns an http redirect" do
     post :create, user: new_user_attributes
