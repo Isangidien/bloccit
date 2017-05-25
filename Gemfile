@@ -32,4 +32,7 @@ gem 'turbolinks'
 # Use bootstrap-sass for css framework and layout
 gem 'bootstrap-sass'
 
+# Used for encrypting User passwords
+ gem 'bcrypt'
+
 gem 'rails_12factor', group: :production
