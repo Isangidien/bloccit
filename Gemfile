@@ -36,3 +36,5 @@ gem 'bootstrap-sass'
  gem 'bcrypt'
 
 gem 'rails_12factor', group: :production
+
+gem 'figaro', '1.0'

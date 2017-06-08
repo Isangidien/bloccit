@@ -66,3 +66,6 @@ bower.json
 >>>>>>> first commit and README update
 =======
 >>>>>>> refs/remotes/origin/master
+
+# Ignore application configuration
+/config/application.yml
