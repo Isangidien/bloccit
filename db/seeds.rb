@@ -8,7 +8,7 @@ require 'random_data'
    password: RandomData.random_sentence
    )
  end
- users = User.all
+users = User.all
 
 # Create Topics
 15.times do

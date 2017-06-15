@@ -7,44 +7,43 @@ class TopicsController < ApplicationController
      @topics = Topic.all
    end
 
-   def show
+  def show
      @topic = Topic.find(params[:id])
    end
 
-   def new
+  def new
      @topic = Topic.new
    end
 
-   def create
-     @topic = Topic.new(topic_params)
+  def create
+    @topic = Topic.new(topic_params)
 
-     if @topic.save
-       redirect_to @topic, notice: "Topic was saved successfully."
-     else
-       flash.now[:alert] = "Error creating topic. Please try again."
-       render :new
-     end
-   end
+    if @topic.save
+      redirect_to @topic, notice: "Topic was saved successfully."
+    else
+      flash.now[:alert] = "Error creating topic. Please try again."
+      render :new
+    end
+  end
 
-    def edit
+  def edit
       @topic = Topic.find(params[:id])
     end
 
-    def update
-     @topic = Topic.find(params[:id])
+  def update
+    @topic = Topic.find(params[:id])
 
-     @topic.assign_attributes(topic_params)
+    @topic.assign_attributes(topic_params)
 
-     if @topic.save
-        flash[:notice] = "Topic was updated."
-       redirect_to @topic
-     else
-       flash.now[:alert] = "Error saving topic. Please try again."
-       render :edit
-     end
-   end
+    if @topic.save
+      redirect_to @topic
+    else
+      flash.now[:alert] = "Error saving topic. Please try again."
+      render :edit
+    end
+  end
 
-   def destroy
+  def destroy
     @topic = Topic.find(params[:id])
 
     if @topic.destroy
@@ -53,8 +52,8 @@ class TopicsController < ApplicationController
     else
       flash.now[:alert] = "There was an error deleting the topic."
       render :show
+      end
     end
-  end
 
   private
    def topic_params
@@ -67,4 +66,4 @@ class TopicsController < ApplicationController
        redirect_to topics_path
      end
    end
-end
+  end
